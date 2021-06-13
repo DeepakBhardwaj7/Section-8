@@ -1,5 +1,5 @@
 #import sqlite3
-from FlaskApiProgramms.Section6.db import db
+from db import db
 
 
 class ItemModel(db.Model):
