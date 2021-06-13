@@ -24,9 +24,9 @@ app.secret_key = 'jose'
 api = Api(app)
 
 #used to create the database table automatically
-@app.before_first_request
-def create_tables():
-    db.create_all()
+# @app.before_first_request
+# def create_tables():
+#     db.create_all()
 
 jwt = JWT(app, auth, identity)
 
@@ -41,5 +41,5 @@ api.add_resource(Store,'/store/<string:name>')
 api.add_resource(StoreList,'/stores')
 
 if __name__ == '__main__':
-    db.init_app(app)
+#     db.init_app(app)
     app.run(debug=True)  # important to mention debug=True
