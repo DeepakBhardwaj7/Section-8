@@ -18,7 +18,7 @@ after that whenever we call any endpoint who has the decorator @JWtrequried then
 method first do the next processing. OKAY!! now gaining the concept
 '''
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get('DATABASE_URL','sqlite:///data.db') #sqlite can be mysql ,oracle or anything and sqlalchemy still works postgresql
+app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get('DATABASE_URI','sqlite:///data.db') #sqlite can be mysql ,oracle or anything and sqlalchemy still works postgresql
 app.config['PROPAGATE_EXCEPTIONS'] = True # To allow flask propagating exception even if debug is set to false on app
 app.config['SQLALCHMY_TRACK_MODIFICATION']=False
 app.secret_key = 'jose'
