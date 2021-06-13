@@ -2,7 +2,7 @@ from flask_jwt import jwt_required
 import sqlite3
 from flask_restful import Resource, reqparse
 
-from FlaskApiProgramms.Section6.models.item import ItemModel
+from models.item import ItemModel
 
 
 class Item(Resource):
